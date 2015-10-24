@@ -5,11 +5,11 @@ var router = express.Router();
 router.get('/posts', function(req, res, next) {
     var db = req.db;
     var collection = db.get('events');
-/*    collection.aggregate({$limit:10},function(e,docs){
-        res.json(docs);
-    });*/
+//    var lat = req.query.lat;
+//    var long = req.query.long;
     //limit find to 10 entries
-    collection.find({},{},function(e,docs){
+//    console.log('lat is '+lat+' long is '+long);
+    collection.find({location:{$near:[Number(req.query.lat),Number(req.query.long)], $maxDistance: 0.05}},{limit:10},function(e,docs){
         res.json(docs);
     });
 });
