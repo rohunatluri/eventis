@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1= title
+	a#createEvent(href='/createevent') Create new event!
+	//p Where will you go today?
+	// Wrapper
+	#wrapper
+		#page
+			#eventsList
+				table
+					tbody
+			#viewport
+				#eventTitle 
+				hr
+				#info
+					#date
+					#time
+					#location
+					#creator
+					p#eventDescription
+
+script(src='/javascripts/global.js')

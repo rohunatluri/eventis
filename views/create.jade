@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= Eventis
+  p Create an event
+  //wrapper
+  #wrapper
+    //add event
+    h2 Enter event information
+    #addEvent
+        fieldset
+            input#inputEventPoster(type='text', placeholder='What is your username?')
+            input#inputEventName(type='text', placeholder='Your event name')
+            br
+            input#inputEventDescr(type='text', placeholder='Your event description')
+            input#inputEventTags(type='text', placeholder='Tag your event beginning with hashes')
+            br
+            button#btnAddEvent Add Event!
+    // /add event
+            
+            
+script(src='/javascripts/create.js')

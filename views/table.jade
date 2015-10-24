@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/table.css')
+	body
+		block content
+			#wrapper
+				#page
+					#eventsList
+						table
+							thead
+								th poster
+								th name
+								th tags
+								th votes
+								th time
+								th date
+								th location
+								th time posted
+							tbody
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='/javascripts/table.js')
